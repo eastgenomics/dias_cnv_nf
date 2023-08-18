@@ -1,0 +1,103 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/./master/nextflow_schema.json",
+    "title": ". pipeline parameters",
+    "description": "",
+    "type": "object",
+    "definitions": {
+        "reference_genome_options": {
+            "title": "Reference genome options",
+            "type": "object",
+            "fa_icon": "fas fa-dna",
+            "description": "Reference genome related files and options required for the workflow.",
+            "properties": {
+                "fasta": {
+                    "type": "string",
+                    "format": "file-path",
+                    "mimetype": "text/plain",
+                    "pattern": "^\\S+\\.fn?a(sta)?(\\.gz)?$",
+                    "description": "Path to FASTA genome file.",
+                    "help_text": "fasta file path",
+                    "fa_icon": "far fa-file-code"
+                }
+            }
+        },
+        "inputs": {
+            "title": "Inputs",
+            "type": "object",
+            "description": "",
+            "properties": {
+               "project": {
+                  "type": "string",
+                  "default": ""
+              },
+               "extension": {
+                  "type": "string",
+                  "default": "*{.bam,.bam.bai}"
+              },
+               "bam": {
+                  "type": "string",
+                  "default": ""
+              },
+               "interval_list": {
+                  "type": "string",
+                  "format": "file-path",
+                 "default": "project-Fkb6Gkj433GVVvj73J7x8KbV:file-GFPxzKj4V50pJX3F4vV58yyg"
+              },
+              "annotation_tsv": {
+                 "type": "string",
+                 "format": "file-path",
+                 "default": "project-Fkb6Gkj433GVVvj73J7x8KbV:file-GFPxzPQ4V50z4pv230p82G0q"
+              },
+             "num_sample": {
+                 "type": "integer",
+                 "default": 3
+              },
+              "run_name": {
+                 "type": "string",
+                 "default": "test_nf_run"
+              },
+               "fasta_fai": {
+                  "type": "string",
+                  "format": "file-path",
+                  "default": "project-Fkb6Gkj433GVVvj73J7x8KbV:file-G6P32kj4YV3y58KyP4k4qG2p"
+               },
+               "fasta_gzi": {
+                  "type": "string",
+                  "format": "file-path",
+                  "default": "project-Fkb6Gkj433GVVvj73J7x8KbV:file-G6BYz104YV3X5qp463K5b5vp"
+               },
+               "ref_bcftools": {
+                  "type": "string",
+                  "format": "file-path",
+                  "default": "project-F3zqGV04fXX5j7566869fjFq:file-F3zxG0Q4fXX9YFjP1v5jK9jf"
+               },
+               "cache_version": {
+                  "type": "integer",
+                  "default": 107
+               },
+               "cache_file": {
+                  "type": "string",
+                  "format": "file-path",
+                  "default": "project-Fkb6Gkj433GVVvj73J7x8KbV:file-GQ7YF104GV6YQ0B98qyQQP58"
+               },
+            
+               "field_str": {
+                  "type": "string",
+                  "default": ""
+               },
+               "buffer_size": {
+                  "type": "integer",
+                  "default": 500
+               }
+
+            }
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/reference_genome_options"
+        }
+    ]
+    
+}

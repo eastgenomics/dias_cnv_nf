@@ -1,0 +1,17 @@
+{ 
+
+   "interval_list" : {
+        "$dnanexus_link" : {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-GFPxzKj4V50pJX3F4vV58yyg"
+        }
+    },
+    
+   "annotation_tsv" : {
+        "$dnanexus_link" : {
+            "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+            "id": "file-GFPxzPQ4V50z4pv230p82G0q"
+        }
+    },
+   "nextflow_pipeline_params":"--project=dx://project-GX84pyQ4FKX336bxfkQV7X1X:/athena_test/ --num_sample=6  --run_name=nf_final_run --epic_menifest=dx://project-GX84pyQ4FKX336bxfkQV7X1X:/gen_bed_ref/epic-manifest-198.txt"
+}
